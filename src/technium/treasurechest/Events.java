@@ -155,7 +155,7 @@ public class Events implements Listener
                 final int num = Integer.parseInt(split[split.length - 1]);
                 if (num <= 0) {
                     event.getWhoClicked().closeInventory();
-                    event.getWhoClicked().sendMessage("§cYou don't have any keys for this chest!");
+                    event.getWhoClicked().sendMessage("Â§cYou don't have any keys for this chest!");
                     return;
                 }
                 final Player pl = (Player)event.getWhoClicked();
@@ -317,7 +317,7 @@ public class Events implements Listener
         			}
         			catch (Exception ex) {}
         			lore.add("");
-        			lore.add("§7" + chest.getName() + "s Owned: " + num);
+        			lore.add("Â§7" + chest.getName() + "s Owned: " + num);
         			lore.add("");
         			im.setLore((List)lore);
         			item.setItemMeta(im);
@@ -367,7 +367,6 @@ public class Events implements Listener
             }
         }
         if (contains) {
-        	player2.sendMessage("FUCK YOU BITCH");
             final Player player3 = event.getPlayer();
             final List<Block> blocks = this.openingChests.get(player3.getName());
             blocks.remove(event.getClickedBlock());
